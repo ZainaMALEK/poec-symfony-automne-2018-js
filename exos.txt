@@ -1,0 +1,7 @@
+*** Projet 4 - Exercice ***
+Au dessus du texte ajouter:
+- l'image d'un drapeau britannique
+- l'image d'un drapeau italien
+
+le clic sur l'un des drapeaux affichera les traductions
+dans la langue correspondante

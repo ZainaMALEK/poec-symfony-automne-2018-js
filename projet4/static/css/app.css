@@ -1,0 +1,8 @@
+.fr {
+  color: blue;
+  font-weight: bold
+}
+
+.en, .it {
+  display: none
+}
