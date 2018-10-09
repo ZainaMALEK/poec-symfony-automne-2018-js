@@ -27,7 +27,7 @@ function addEventsV2() {
   for (let i=0; i<imagesSmall2.length; i++) {
     imagesSmall2[i].addEventListener('mouseover', e => {
       displayImageBigV2(e.target.src);
-    })
+     })
   }
 }
 
@@ -52,8 +52,14 @@ function displayImageBigV2(imageSrc) {
   let baseUrl = imageSrc.substr(0, indiceSmall);
   let filename = imageSrc.substr(indiceSmall + 6);
   let finalUrl = baseUrl + filename;
+  imageBig.innerHTML = '<img id="big" src="'+ finalUrl +'" alt="" />';
 
-  imageBig.innerHTML = '<img src="'+ finalUrl +'" alt="" />';
+  // APRES injection de l'image de le DOM
+  // ajout d'un écouteur d'événement click
+  // permettant de supprimer m'image lorsque l'on clique dessus
+  document
+    .getElementById('big')
+    .addEventListener('click', e => imageBig.innerHTML = '')
 }
 
 function reset() {
