@@ -7,8 +7,8 @@ const cbActive = document.getElementById('cbActive');
 // Source de données globales (accessibles à toutes les fonctions)
 let players = [
   {active: true, photoUrl:'https://medias.lequipe.fr/img-photo-jpg/09-12-17-torino-allianz-stadium-serie-a-16a-giornata-juventus-inter-nella-foto-blaise-matuidi/1500000000891906/121:245,2417:1775-624-416-75/67f39.jpg', firstname: 'Blaise', lastname: 'Matuidi', num: 16, team: 'Juventus'},
-  {active: false, photoUrl:'static/img/bonucci.jpeg', firstname: 'Paolo', lastname: 'Dybala', num: 10, team: 'Juventus'},
-  {active: false, photoUrl:'static/img/dybala.jpg', firstname: 'Leo', lastname: 'Bonucci', num: 19, team: 'Juventus'},
+  {active: false, photoUrl:'static/img/dybala.jpg', firstname: 'Paolo', lastname: 'Dybala', num: 10, team: 'Juventus'},
+  {active: false, photoUrl:'static/img/bonucci.jpeg', firstname: 'Leo', lastname: 'Bonucci', num: 19, team: 'Juventus'},
   {active: true, photoUrl:'', firstname: 'Kylian', lastname: 'Mbappé', num: 7, team: 'PSG'}
 ];
 
