@@ -5,3 +5,9 @@ Au dessus du texte ajouter:
 
 le clic sur l'un des drapeaux affichera les traductions
 dans la langue correspondante
+
+*** Projet 6 - Exercice ***
+Si les conditions de validation sont remplies:
+- afficher dans le DOM, l'icône d'un pouce victorieux
+sinon:
+- afficher une icône symbolisant l'échec
