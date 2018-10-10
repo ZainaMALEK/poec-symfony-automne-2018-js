@@ -6,3 +6,8 @@
 .en, .it {
   display: none
 }
+
+img.flag {
+  height: 30px;
+  opacity: 0.3;
+}
