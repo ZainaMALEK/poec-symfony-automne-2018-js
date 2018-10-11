@@ -7,5 +7,6 @@
 #suggestionList li {
   background-color: #ddd;
   padding: 4px;
-  border-bottom: 1px #444 solid
+  border-bottom: 1px #444 solid;
+  cursor: pointer;
 }

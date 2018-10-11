@@ -1,6 +1,7 @@
 // Ciblage du DOM
 const destination = document.getElementById('destination');
 const suggestionList = document.getElementById('suggestionList');
+const otherCities = document.getElementById('otherCities');
 
 // Source de données
 const cities = [
@@ -65,8 +66,12 @@ function displaySuggestions() {
   let lis = suggestionList.querySelectorAll('li');
   for (let i=0; i<lis.length; i++) {
     lis[i].addEventListener('click', e => {
-      destination.value = e.target.textContent;
-      clearSuggestions();
+      clearSuggestions(); // nettoyage
+      let cityName = e.target.textContent;
+      destination.value = cityName;
+      let country = getCountry(cityName);
+      let foundCities = getCities(country, cityName);
+      displayOtherCities(foundCities, country);
     })
   }
 }
@@ -75,7 +80,62 @@ function clearSuggestions() {
   // purge
   suggestions = [];
   suggestionList.innerHTML = '';
+  otherCities.innerText = '';
 }
+
+function getCountry(cityName) {
+  // retourne le nom du pays par rapport à un
+  // nom de ville fourni en entrée
+  let country = null;
+
+  for (let i=0; i<cities.length; i++) {
+    if (cities[i].name == cityName) {
+      country = cities[i].country;
+      break;
+    }
+  }
+
+  return country;
+}
+
+function getCities(countryName, excludeCity) {
+  // retourne une collection de villes
+  // par rapport au nom de pays fourni en entrée
+  let foundCities = [];
+
+  cities.forEach(city => {
+    if (city.country == countryName &&
+      city.name != excludeCity) {
+      foundCities.push(city);
+    }
+  })
+
+  return foundCities;
+}
+
+function displayOtherCities(others, country) {
+  // affiche les autres villes pour le pays concerné
+  // les autres villes et le pays sont fournis en entrée
+  let info = 'Autres villes pour ' + country + ': ';
+
+  others.forEach((city, index) => {
+    //info += city.name + ', ';
+    info += city.name;
+
+    // si on parvient au dernier élément du tableau
+    // on ajoute un point sinon une virgule suivi d'une espace
+    info += (index == others.length-1) ? '.' : ', ';
+  })
+
+  // autre possibilité pour remplacer la virgule finale
+  // par un point:
+  //let indice = info.length - 2;
+  //let info2 = info.substr(0, indice) + '.';
+  //info = info2;
+
+  otherCities.innerText = info;
+}
+
 
 function init() {
   addEvents();
