@@ -11,3 +11,10 @@ Si les conditions de validation sont remplies:
 - afficher dans le DOM, l'icône d'un pouce victorieux
 sinon:
 - afficher une icône symbolisant l'échec
+
+*** Projet 7 - Exercice ***
+Au clic, sur l'une des suggestions:
+Afficher dans le dom, la liste des autres
+villes pour le pays concerné
+Exemple: au clic sur Palerme,
+Autres villes pour Italie: Turin, Bergame, etc.
