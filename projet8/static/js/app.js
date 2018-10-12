@@ -5,10 +5,12 @@ const counter = document.querySelector('#counter');
 
 // Paramètres
 const config = {
-  delay: 2000
+  delay: 4000
 }
 
 // variable globale permettant de controler l'intervale
+// lorsque cette variable vaut null, on en déduit
+// qu'un intervale n'est en cours
 let interv = null;
 
 // Fonctions
@@ -20,15 +22,20 @@ function displayBox() {
   if (interv == null) {
     box.style.display = 'block';
     counter.innerText = config.delay / 1000;
-    setTimeout(hideBox, config.delay);
+
+    // ajout de 100ms de manière à voir le zéro
+    // juste avant la disparition de la boîte
+    setTimeout(hideBox, config.delay + 100);
+
+    // interv n'est plus null
     interv = setInterval(countdown, 1000);
   }
 }
 
 function hideBox() {
   box.style.display = 'none';
-  clearInterval(interv);
-  interv = null;
+  clearInterval(interv); // destruction de l'interval
+  interv = null; // interv redevient null
 }
 
 function countdown() {

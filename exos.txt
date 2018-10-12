@@ -17,3 +17,11 @@ Au clic, sur l'une des suggestions:
 Afficher dans le DOM, la liste des autres villes pour le pays concerné
 Exemple: au clic sur Palerme =>
 Autres villes pour Italie: Turin, Bergame, etc.
+
+
+*** Projet 10 - Exercice ***
+Dans le DOM initial, afficher 3 images.
+Au clic sur le bouton test => faire disparaître les
+images progressivement (opacité 1 => 0) et simultanément.
+Proposer une variable de configuration permettant
+de modifier la vitesse de l'animation
