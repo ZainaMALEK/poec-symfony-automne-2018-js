@@ -34,7 +34,7 @@ Vos choix:
   - boisson 1 x2  prix
 Prix total  commander
 
-Le clic sur commander affichera un message de remerciemen
+Le clic sur commander affichera un message de remerciement
 
 Bonus:
 Permettre de supprimer un élément du panier
